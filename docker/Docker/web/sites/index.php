@@ -1,17 +1,4 @@
 <?php
-function testParam($_GET['id'])
-{
-if (isset($_GET['id']))
-{
-	return echo $_GET['id'];
-}
-else
-{
-	return echo 'Veuillez passer en parametre l"id de la page voulue (1,2,3)';
-}
-}
-
-
 $servername="localhost";
 $username="root";
 $password="root";
