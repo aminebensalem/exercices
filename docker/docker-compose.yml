@@ -11,24 +11,24 @@ services:
       - "8080:80"
 
     volumes:
-      - /Docker/web/www:/var/www/html
-      - /Docker/web/sites:/etc/nginx/conf.d
+      - ./Docker/web/www:/var/www/html
+      - ./Docker/web/sites:/etc/nginx/conf.d
   php:
     container_name: php
-    image: php-mysql:fpm
+    image: php:fpm
     volumes:
-      - /Docker/web/www:/var/www/html
+      - ./Docker/web/www:/var/www/html
 
   db:
-     image: mysql:5.5
+     image: mysql:latest
      environment:
-      - "MYSQL_ROOT_PASSWORD: root"
-      - "MYSQL_USER: user"
-      - "MYSQL_PASSWORD: password"
-      - "MYSQL_DATABASE: database"
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=root
 
      volumes:
       - ./database-initialisation:/docker-entrypoint-initdb.d
       - ./volumes/data/db:/var/lib/mysql
      ports:
-      - "3309: 3309"
+      - "3306:3306"
