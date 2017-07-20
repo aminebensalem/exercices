@@ -1,3 +1,4 @@
+/db.opt
 /host_summary.frm
 /host_summary_by_file_io.frm
 /host_summary_by_file_io_type.frm
@@ -22,7 +23,6 @@
 /processlist.frm
 /ps_check_lost_instrumentation.frm
 /schema_auto_increment_columns.frm
-/db.opt
 /schema_index_statistics.frm
 /schema_object_overview.frm
 /schema_redundant_indexes.frm
