@@ -1,7 +1,5 @@
 FROM nginx
-VOLUME /usr/share/nginx/html
-
-VOLUME /etc/nginx
+RUN rm -v /etc/nginx/nginx.conf
 
 COPY sites/index.php /usr/share/nginx/html
 

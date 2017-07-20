@@ -11,7 +11,7 @@ services:
       - "8080:80"
 
     volumes:
-      - ./web/sites:/etc/nginx/conf.d/index.conf
+      - ./web/sites:/etc/nginx/conf.d
     environment:
       - NGINX_HOST=localhost
       - NGINX_port=80
