@@ -8,8 +8,10 @@ public class FizzBuzz {
 	}
 
 	public String verifierLeNombre(int i) {
-		
-		return String.valueOf(i);
+		if(i%3==0){
+			return "Fizz";
+		}
+		else return String.valueOf(i);
 	}
 
 }

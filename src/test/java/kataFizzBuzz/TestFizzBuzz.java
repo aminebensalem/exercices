@@ -32,7 +32,7 @@ public class TestFizzBuzz {
 		
 		FizzBuzz fizzBuzz = new FizzBuzz();
 		
-		String resultat=fizzBuzz.verifierLeNombre(2);
+		String resultat=fizzBuzz.verifierLeNombre(3);
 		
 		Assert.assertEquals("Fizz", resultat);
 	}
