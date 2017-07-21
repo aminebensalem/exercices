@@ -9,7 +9,7 @@ public class FizzBuzz {
 
 	public String verifierQueLeNombreEstUnFizz() {
 		
-		return null;
+		return "Fizz";
 	}
 
 }
