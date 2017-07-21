@@ -9,18 +9,17 @@ public class FizzBuzz {
 	}
 
 	private String calculDuRestDeDivision(int i) {
-		String resultat = null;
+		String resultat ="";
 		if(i>0 && i<=100){
-			if(i%3==0 && i%5!=0){
-				resultat = "Fizz";
+			if(i%3==0){
+				resultat += "Fizz";
 			}
-			else if (i%5==0 && i%3!=0){
-				resultat = "Buzz";
+			if (i%5==0){
+				resultat += "Buzz";
 			}
-			else if (i%5==0 && i%3==0){
-				resultat = "FizzBuzz";
+			if(i%3!=0 && i%5!=0){
+				resultat = String.valueOf(i);
 			}
-			else resultat = String.valueOf(i);
 		}else resultat = "Erreur";
 		return resultat;
 		
