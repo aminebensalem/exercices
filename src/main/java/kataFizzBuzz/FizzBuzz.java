@@ -4,7 +4,7 @@ public class FizzBuzz {
 
 	public String verifierLeNombre() {
 		
-		return null;
+		return "1";
 	}
 
 }
