@@ -8,7 +8,7 @@ public class TestFizzBuzz {
 	public void testFizzBuzzdeUn() {
 		FizzBuzz fizzBuzz = new FizzBuzz();
 
-		String resultat=fizzbuzz.verifierLeNombre();
+		String resultat=fizzBuzz.verifierLeNombre();
 
 		Assert.assertEquals("1", resultat);
 	}
