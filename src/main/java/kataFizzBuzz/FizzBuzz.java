@@ -21,7 +21,7 @@ public class FizzBuzz {
 				resultat = "FizzBuzz";
 			}
 			else resultat = String.valueOf(i);
-		}
+		}else resultat = "Erreur";
 		return resultat;
 		
 	}
