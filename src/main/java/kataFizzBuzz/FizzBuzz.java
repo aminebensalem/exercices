@@ -9,7 +9,7 @@ public class FizzBuzz {
 
 	public String verifierLeNombre(int i) {
 		
-		return "1";
+		return String.valueOf(i);
 	}
 
 }
