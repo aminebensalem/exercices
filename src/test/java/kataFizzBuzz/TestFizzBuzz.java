@@ -44,4 +44,13 @@ public class TestFizzBuzz {
 		
 		Assert.assertEquals("Fizz", resultat);
 	}
+	@Test
+	public void testDuNombreCinq(){
+		
+		FizzBuzz fizzBuzz = new FizzBuzz();
+		
+		String resultat=fizzBuzz.verifierLeNombre(5);
+		
+		Assert.assertEquals("Buzz", resultat);
+	}
 }
