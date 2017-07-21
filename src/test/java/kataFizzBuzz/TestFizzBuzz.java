@@ -14,17 +14,10 @@ public class TestFizzBuzz {
 	}
 	
 	@Test
-	public void testFizzDuNombreUn(){
-		FizzBuzz fizzBuzz = new FizzBuzz();
-		
-		String resultat=fizzBuzz.verifierQueLeNombreEstUnFizz();
-		Assert.assertEquals("Fizz", resultat);
-	}
-	@Test
 	public void testFizzDeUn(){
 		FizzBuzz fizzBuzz = new FizzBuzz();
 		String resultat=fizzBuzz.verifierQueLeNombreEstUnFizz(1);
-		Assert.assertEquals("Fizz", resultat);
+		Assert.assertEquals("1", resultat);
 	}
 
 }
