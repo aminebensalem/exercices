@@ -1,0 +1,47 @@
+version: '2'
+
+networks:
+  code-network:
+#    driver: bridge
+services:
+  web:
+    build: ./web
+    container_name: web
+    ports:
+      - "8080:80"
+
+    volumes:
+      - ./web/sites:/etc/nginx/conf.d
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_port=80
+
+    networks:
+      - code-network
+
+    
+  php:
+    image: php:7-fpm
+    container_name: php
+    volumes:
+      - ./php/etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
+      - ./php/web/www:/var/www/html
+    networks:
+      - code-network
+  
+  db:
+     image: mysql:latest
+     container_name: db
+     networks:
+      - code-network
+     environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=root
+
+     volumes:
+      - ./db/database-initialisation:/docker-entrypoint-initdb.d
+      - ./db/volumes/data/db:/var/lib/mysql
+     ports:
+      - "3306:3306"
