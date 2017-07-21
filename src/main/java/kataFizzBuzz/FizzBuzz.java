@@ -18,7 +18,7 @@ public class FizzBuzz {
 				resultat += "Buzz";
 			}
 			if(i%3!=0 && i%5!=0){
-				resultat = String.valueOf(i);
+				resultat += String.valueOf(i);
 			}
 		}else resultat = "Erreur";
 		return resultat;
