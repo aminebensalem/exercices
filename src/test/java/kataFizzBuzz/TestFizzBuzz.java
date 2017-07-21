@@ -16,8 +16,16 @@ public class TestFizzBuzz {
 	@Test
 	public void testFizzDeUn(){
 		FizzBuzz fizzBuzz = new FizzBuzz();
-		String resultat=fizzBuzz.verifierQueLeNombreEstUnFizz(1);
+		String resultat=fizzBuzz.verifierLeNombre(1);
 		Assert.assertEquals("1", resultat);
+	}
+	@Test
+	public void testDuNombredeux(){
+		FizzBuzz fizzBuzz = new FizzBuzz();
+		
+		String resultat=fizzBuzz.verifierLeNombre(2);
+		
+		Assert.assertEquals("2", resultat);
 	}
 
 }

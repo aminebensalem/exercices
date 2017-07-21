@@ -7,7 +7,7 @@ public class FizzBuzz {
 		return "1";
 	}
 
-	public String verifierQueLeNombreEstUnFizz(int i) {
+	public String verifierLeNombre(int i) {
 		
 		return "1";
 	}
