@@ -27,7 +27,15 @@ public class RomanNumerals {
 			
 			}
 		}
-		else resultat = "XI";
+		if (i>conv.size()){
+			i=i-conv.size();
+			resultat="X";
+			for(Entry<Integer,String> m: conv.entrySet()){
+				if(m.getKey()==i){
+					resultat+=(String) m.getValue();
+				}
+			}
+		}
 		return resultat;
 	}
 
