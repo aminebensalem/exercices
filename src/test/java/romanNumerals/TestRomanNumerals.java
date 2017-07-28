@@ -64,7 +64,7 @@ public class TestRomanNumerals {
 		
 		Assert.assertEquals("XIX", resultatConversion);
 	}
-	@Ignore
+	
 	@Test 
 	public void testDeConvesionDuChiffreVingt(){
 		RomanNumerals romanNumeral = new RomanNumerals();
