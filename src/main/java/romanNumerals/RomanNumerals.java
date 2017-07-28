@@ -35,6 +35,9 @@ public class RomanNumerals {
 		conv.put(700, "DCC");
 		conv.put(800, "DCCC");
 		conv.put(900, "CM");
+		conv.put(1000, "M");
+		conv.put(2000, "MM");
+		conv.put(1000, "MMM");
 	
 		String resultat ="";
 		
@@ -49,6 +52,7 @@ public class RomanNumerals {
 		String chiffreUnitaireRomain = "";
 		String chiffreDizaineRomain="";
 		String chiffreCentaineRomain="";
+		String chiffreMillierRomain="";
 		for(Entry<Integer,String> m: conv.entrySet()){
 			if(m.getKey()==i){
 				return resultat=(String) m.getValue();
@@ -78,8 +82,14 @@ public class RomanNumerals {
 				}
 			}
 		}
+		if(Integer.toString(i).length()>=4){
+			int i4 = Integer.parseInt(Integer.toString(i).substring(Integer.toString(i).length()-4,Integer.toString(i).length()-3)+"000");
+			for(Entry<Integer,String> m:conv.entrySet()){
+				chiffreMillierRomain = (String) m.getValue();
+			}
+		}
 		
-		return resultat=chiffreCentaineRomain+chiffreDizaineRomain+chiffreUnitaireRomain;
+		return resultat=chiffreMillierRomain+chiffreCentaineRomain+chiffreDizaineRomain+chiffreUnitaireRomain;
 	}
 	
 
