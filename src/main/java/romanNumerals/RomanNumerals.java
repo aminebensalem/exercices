@@ -19,24 +19,38 @@ public class RomanNumerals {
 		conv.put(9, "IX");
 		conv.put(10, "X");
 		String resultat ="";
-		if (i>0 && i<= conv.size()){
-			resultat = parcourirUnMap(i, conv, resultat);
-		}
-		if (i>conv.size()){
-			i=i-conv.size();
-			resultat="X";
-			resultat = parcourirUnMap(i, conv, resultat);
-		}
+		
+		resultat = parcourirUnMap(i, conv);
+		
 		return resultat;
 	}
 
-	private String parcourirUnMap(int i, Map<Integer, String> conv, String resultat) {
+	
+	private String parcourirUnMap(int i, Map<Integer, String> conv) {
+		String resultat = "" ;
+		String chiffreUnitaireRomain = "";
+		String chiffreDizaineRomain="";
 		for(Entry<Integer,String> m: conv.entrySet()){
 			if(m.getKey()==i){
-				resultat+=(String) m.getValue();
+				return resultat=(String) m.getValue();
 			}
+		
 		}
-		return resultat;
+		
+		int i1 = Integer.parseInt(Integer.toString(i).substring(Integer.toString(i).length()-2,Integer.toString(i).length()-1)+"0");
+		int i2 = Integer.parseInt(Integer.toString(i).substring(Integer.toString(i).length()-1,Integer.toString(i).length()));
+
+		for(Entry<Integer,String> m:conv.entrySet()){
+			if(m.getKey()==i1){
+				chiffreDizaineRomain=(String) m.getValue();
+			}
+			if(m.getKey()==i2){
+				chiffreUnitaireRomain=(String) m.getValue();
+			}
+		
+		}
+		
+		return resultat=chiffreDizaineRomain+chiffreUnitaireRomain;
 	}
 	
 
