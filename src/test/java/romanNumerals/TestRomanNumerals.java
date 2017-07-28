@@ -80,4 +80,13 @@ public class TestRomanNumerals {
 		
 		Assert.assertEquals("XIX", resultatConversion);
 	}
+	
+	@Test 
+	public void testDeConvesionDuChiffreVingt(){
+		RomanNumerals romanNumeral = new RomanNumerals();
+		
+		String resultatConversion = romanNumeral.conversionDuChiffreEnRomain(20);
+		
+		Assert.assertEquals("XX", resultatConversion);
+	}
 }
