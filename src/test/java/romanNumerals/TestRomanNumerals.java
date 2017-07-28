@@ -62,4 +62,13 @@ public class TestRomanNumerals {
 		
 		Assert.assertEquals("XI", resultatConversion);
 	}
+	
+	@Test
+	public void testDeconversionDuChiffreDouze(){
+		RomanNumerals romanNumeral = new RomanNumerals();
+		
+		String resultatConversion = romanNumeral.conversionDuChiffreEnRomain(12);
+		
+		Assert.assertEquals("XII", resultatConversion);
+	}
 }
