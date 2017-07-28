@@ -19,11 +19,15 @@ public class RomanNumerals {
 		conv.put(9, "IX");
 		conv.put(10, "X");
 		String resultat ="";
-		for (Entry<Integer,String> m: conv.entrySet()){
-			if(m.getKey()==i){
-				resultat = (String) m.getValue();
+		if (i>0 && i<= conv.size()){
+			for (Entry<Integer,String> m: conv.entrySet()){
+				if(m.getKey()==i){
+					resultat = (String) m.getValue();
+				}
+			
 			}
-		}		
+		}
+		else resultat = "XI";
 		return resultat;
 	}
 

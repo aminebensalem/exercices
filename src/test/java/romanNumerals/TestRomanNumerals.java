@@ -58,7 +58,7 @@ public class TestRomanNumerals {
 	public void testDeConversionDuChiffreOnze(){
 		RomanNumerals romanNumeral = new RomanNumerals();
 		
-		String resultatConversion = romanNumeral.conversionDuChiffreEnRomain(9);
+		String resultatConversion = romanNumeral.conversionDuChiffreEnRomain(11);
 		
 		Assert.assertEquals("XI", resultatConversion);
 	}
