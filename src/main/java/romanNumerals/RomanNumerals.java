@@ -27,6 +27,15 @@ public class RomanNumerals {
 		conv.put(80, "LXXX");
 		conv.put(90, "XC");
 		conv.put(100, "C");
+		conv.put(200, "CC");
+		conv.put(300, "CCC");
+		conv.put(400, "CD");
+		conv.put(500, "D");
+		conv.put(600, "DC");
+		conv.put(700, "DCC");
+		conv.put(800, "DCCC");
+		conv.put(900, "CM");
+	
 		String resultat ="";
 		
 		resultat = parcourirUnMap(i, conv);
