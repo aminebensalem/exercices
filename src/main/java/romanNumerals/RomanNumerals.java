@@ -20,23 +20,24 @@ public class RomanNumerals {
 		conv.put(10, "X");
 		String resultat ="";
 		if (i>0 && i<= conv.size()){
-			for (Entry<Integer,String> m: conv.entrySet()){
-				if(m.getKey()==i){
-					resultat = (String) m.getValue();
-				}
-			
-			}
+			resultat = parcourirUnMap(i, conv, resultat);
 		}
 		if (i>conv.size()){
 			i=i-conv.size();
 			resultat="X";
-			for(Entry<Integer,String> m: conv.entrySet()){
-				if(m.getKey()==i){
-					resultat+=(String) m.getValue();
-				}
+			resultat = parcourirUnMap(i, conv, resultat);
+		}
+		return resultat;
+	}
+
+	private String parcourirUnMap(int i, Map<Integer, String> conv, String resultat) {
+		for(Entry<Integer,String> m: conv.entrySet()){
+			if(m.getKey()==i){
+				resultat+=(String) m.getValue();
 			}
 		}
 		return resultat;
 	}
+	
 
 }
