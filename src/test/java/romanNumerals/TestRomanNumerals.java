@@ -1,6 +1,5 @@
 package romanNumerals;
 
-import static org.junit.Assert.*;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -17,6 +16,7 @@ public class TestRomanNumerals {
 		
 		Assert.assertEquals("I",resultatConversion);
 	}
+	
 	@Test
 	public void testDeConversionDuChiffreDeux(){
 		RomanNumerals romanNumeral = new RomanNumerals();
@@ -24,5 +24,14 @@ public class TestRomanNumerals {
 		String resultatConversion = romanNumeral.conversionDuChiffreEnRomain(2);
 		
 		Assert.assertEquals("II", resultatConversion);
+	}
+	
+	@Test
+	public void testDeConversionDuChiffreTrois(){
+		RomanNumerals romanNumeral = new RomanNumerals();
+		
+		String resultatConversion = romanNumeral.conversionDuChiffreEnRomain(3);
+		
+		Assert.assertEquals("III", resultatConversion);
 	}
 }
