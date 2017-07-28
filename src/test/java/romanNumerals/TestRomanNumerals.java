@@ -13,7 +13,7 @@ public class TestRomanNumerals {
 	public void testDeConversionDuChiffreUn(){
 		RomanNumerals romanNumeral = new RomanNumerals();
 		
-		String resultatConversion = romanNumeral.conversionDuChiffreRomain(1);
+		String resultatConversion = romanNumeral.conversionDuChiffreEnRomain(1);
 		
 		Assert.assertEquals("I",resultatConversion);
 	}
