@@ -39,27 +39,44 @@ public class RomanNumerals {
 		String resultat = "" ;
 		String chiffreUnitaireRomain = "";
 		String chiffreDizaineRomain="";
+		String chiffreCentaineRomain="";
 		for(Entry<Integer,String> m: conv.entrySet()){
 			if(m.getKey()==i){
 				return resultat=(String) m.getValue();
 			}
 		
 		}
-		
-		int i1 = Integer.parseInt(Integer.toString(i).substring(Integer.toString(i).length()-2,Integer.toString(i).length()-1)+"0");
-		int i2 = Integer.parseInt(Integer.toString(i).substring(Integer.toString(i).length()-1,Integer.toString(i).length()));
+		if(Integer.toString(i).length()>=2){
+			int i1 = Integer.parseInt(Integer.toString(i).substring(Integer.toString(i).length()-2,Integer.toString(i).length()-1)+"0");
+			int i2 = Integer.parseInt(Integer.toString(i).substring(Integer.toString(i).length()-1,Integer.toString(i).length()));
 
-		for(Entry<Integer,String> m:conv.entrySet()){
-			if(m.getKey()==i1){
-				chiffreDizaineRomain=(String) m.getValue();
+			for(Entry<Integer,String> m:conv.entrySet()){
+				if(m.getKey()==i1){
+					chiffreDizaineRomain=(String) m.getValue();
+				}
+				if(m.getKey()==i2){
+					chiffreUnitaireRomain=(String) m.getValue();
+				}
 			}
-			if(m.getKey()==i2){
-				chiffreUnitaireRomain=(String) m.getValue();
+		}
+		if(Integer.toString(i).length()>=3){
+			int i1 = Integer.parseInt(Integer.toString(i).substring(Integer.toString(i).length()-3,Integer.toString(i).length()-2)+"00");
+			int i2 = Integer.parseInt(Integer.toString(i).substring(Integer.toString(i).length()-2,Integer.toString(i).length()-1)+"0");
+			int i3 = Integer.parseInt(Integer.toString(i).substring(Integer.toString(i).length()-1,Integer.toString(i).length()));
+			for(Entry<Integer,String> m:conv.entrySet()){
+				if(m.getKey()==i1){
+					chiffreCentaineRomain=(String) m.getValue();
+				}
+				if(m.getKey()==i2){
+					chiffreDizaineRomain=(String) m.getValue();
+				}
+				if(m.getKey()==i3){
+					chiffreUnitaireRomain=(String) m.getValue();
+				}
 			}
-		
 		}
 		
-		return resultat=chiffreDizaineRomain+chiffreUnitaireRomain;
+		return resultat=chiffreCentaineRomain+chiffreDizaineRomain+chiffreUnitaireRomain;
 	}
 	
 
