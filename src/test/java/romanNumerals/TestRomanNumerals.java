@@ -45,4 +45,13 @@ public class TestRomanNumerals {
 		
 		Assert.assertEquals("C", resultatConversion);
 	}
+	
+	@Test
+	public void testDeConversionDuChiffreCentUn(){
+		RomanNumerals romanNumeral = new RomanNumerals();
+		
+		String resultatConversion = romanNumeral.conversionDuChiffreEnRomain(101);
+		
+		Assert.assertEquals("CI", resultatConversion);
+	}
 }
