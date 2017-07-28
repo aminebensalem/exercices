@@ -82,4 +82,12 @@ public class TestRomanNumerals {
 		
 		Assert.assertEquals("XXI", resultatConversion);
 	}
+	@Test 
+	public void testDeConversionDuChiffreTrentreEtUn(){
+		RomanNumerals romanNumeral = new RomanNumerals();
+		
+		String resultatConversion = romanNumeral.conversionDuChiffreEnRomain(31);
+		
+		Assert.assertEquals("XXXI", resultatConversion);
+	}
 }
