@@ -18,7 +18,6 @@ public class TestRomanNumerals {
 		Assert.assertEquals("I",resultatConversion);
 	}
 	
-	@Ignore
 	@Test
 	public void testDeConversionDuChiffreDeux(){
 		RomanNumerals romanNumeral = new RomanNumerals();
