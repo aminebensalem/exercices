@@ -53,4 +53,13 @@ public class TestRomanNumerals {
 		
 		Assert.assertEquals("IX", resultatConversion);
 	}
+	
+	@Test
+	public void testDeConversionDuChiffreOnze(){
+		RomanNumerals romanNumeral = new RomanNumerals();
+		
+		String resultatConversion = romanNumeral.conversionDuChiffreEnRomain(9);
+		
+		Assert.assertEquals("XI", resultatConversion);
+	}
 }
