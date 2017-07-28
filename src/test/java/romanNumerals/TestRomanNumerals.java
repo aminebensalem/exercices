@@ -26,7 +26,7 @@ public class TestRomanNumerals {
 		
 		Assert.assertEquals("II", resultatConversion);
 	}
-	@Ignore
+	
 	@Test
 	public void testDeConversionDuChiffreTrois(){
 		RomanNumerals romanNumeral = new RomanNumerals();
@@ -35,7 +35,7 @@ public class TestRomanNumerals {
 		
 		Assert.assertEquals("III", resultatConversion);
 	}
-	@Ignore
+	
 	@Test
 	public void testDeConversionDuChiffreQuatre(){
 		RomanNumerals romanNumeral = new RomanNumerals();

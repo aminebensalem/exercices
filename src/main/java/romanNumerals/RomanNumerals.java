@@ -11,7 +11,7 @@ public class RomanNumerals {
 		conv.put(1, "I");
 		conv.put(2, "II");
 		conv.put(3, "III");
-		conv.put(4, "VI");
+		conv.put(4, "IV");
 		String resultat ="";
 		for (Entry<Integer,String> m: conv.entrySet()){
 			if(m.getKey()==i){
