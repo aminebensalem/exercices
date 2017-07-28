@@ -44,4 +44,13 @@ public class TestRomanNumerals {
 		
 		Assert.assertEquals("IV", resultatConversion);
 	}
+	
+	@Test
+	public void testDeConversionDuChiffreNeuf(){
+		RomanNumerals romanNumeral = new RomanNumerals();
+		
+		String resultatConversion = romanNumeral.conversionDuChiffreEnRomain(9);
+		
+		Assert.assertEquals("IX", resultatConversion);
+	}
 }
