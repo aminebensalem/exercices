@@ -37,14 +37,6 @@ public class TestRomanNumerals {
 		Assert.assertEquals("XIX", resultatConversion);
 	}
 	
-	@Test
-	public void testDeConversionDuChiffreCent(){
-		RomanNumerals romanNumeral = new RomanNumerals();
-		
-		String resultatConversion = romanNumeral.conversionDuChiffreEnRomain(100);
-		
-		Assert.assertEquals("C", resultatConversion);
-	}
 	
 	@Test
 	public void testDeConversionDuChiffreCentUn(){
@@ -53,6 +45,14 @@ public class TestRomanNumerals {
 		String resultatConversion = romanNumeral.conversionDuChiffreEnRomain(101);
 		
 		Assert.assertEquals("CI", resultatConversion);
+	}
+	@Test
+	public void testDeConversionDuChiffreNeufCentsQuatreVingtsDixNeuf(){
+		RomanNumerals romanNumeral = new RomanNumerals();
+		
+		String resultatConversion = romanNumeral.conversionDuChiffreEnRomain(999);
+		
+		Assert.assertEquals("CMXCIX", resultatConversion);
 	}
 	
 }
