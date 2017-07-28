@@ -71,4 +71,13 @@ public class TestRomanNumerals {
 		
 		Assert.assertEquals("XII", resultatConversion);
 	}
+	
+	@Test
+	public void testDeConversionDuChiffreDixNeuf(){
+		RomanNumerals romanNumeral = new RomanNumerals();
+		
+		String resultatConversion = romanNumeral.conversionDuChiffreEnRomain(19);
+		
+		Assert.assertEquals("XIX", resultatConversion);
+	}
 }
