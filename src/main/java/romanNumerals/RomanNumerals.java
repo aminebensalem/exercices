@@ -18,6 +18,7 @@ public class RomanNumerals {
 		conv.put(8, "VIII");
 		conv.put(9, "IX");
 		conv.put(10, "X");
+		conv.put(20, "XX");
 		String resultat ="";
 		
 		resultat = parcourirUnMap(i, conv);
