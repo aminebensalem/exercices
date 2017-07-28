@@ -54,5 +54,12 @@ public class TestRomanNumerals {
 		
 		Assert.assertEquals("CMXCIX", resultatConversion);
 	}
-	
+	@Test
+	public void testDeConversionDuChiffre1500(){
+		RomanNumerals romanNumeral = new RomanNumerals();
+		
+		String resultatConversion = romanNumeral.conversionDuChiffreEnRomain(1500);
+		
+		Assert.assertEquals("MD", resultatConversion);
+	}
 }
