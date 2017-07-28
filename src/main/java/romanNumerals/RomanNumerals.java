@@ -19,6 +19,14 @@ public class RomanNumerals {
 		conv.put(9, "IX");
 		conv.put(10, "X");
 		conv.put(20, "XX");
+		conv.put(30, "XXX");
+		conv.put(40, "XL");
+		conv.put(50, "L");
+		conv.put(60, "LX");
+		conv.put(70, "LXX");
+		conv.put(80, "LXXX");
+		conv.put(90, "XC");
+		conv.put(100, "C");
 		String resultat ="";
 		
 		resultat = parcourirUnMap(i, conv);
