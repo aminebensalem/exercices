@@ -18,6 +18,16 @@ public class RomanNumeralsII {
 			resultat = chiffreNeuf(number.substring(1, 2), resultat);
 			resultat = dixVingtEtTrentre(number, resultat, decimal);
 			resultat = quarante(number, resultat);
+			if (Integer.valueOf(number.substring(0,1)) >= 5 && Integer.valueOf(number.substring(0,1)) <=8){
+				decimal = "L";
+				if(Integer.valueOf(number.substring(0,1)) != 5){
+					int nb = Integer.valueOf(number.substring(0,1));
+					for (int i = 6 ; i <= nb ; i++){
+						decimal += "X";
+					}
+				}
+				resultat = decimal + resultat ;
+			}
 		}
 		return resultat;
 	}
