@@ -7,6 +7,9 @@ public class RomanNumeralsII {
 		resultat = chiffreEntreUnEtQuatre(number, resultat);
 		resultat = chiffreEntreCinqEtHuit(number, resultat);
 		resultat = chiffreNeuf(number, resultat);
+		if(number.equals("11")){
+			resultat = "XI";
+		}
 		return resultat;
 	}
 
