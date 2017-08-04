@@ -16,4 +16,13 @@ public class romanNumeralsTestII {
 		
 		assertEquals("1" , "I" , resultat);
 	}
+	
+	@Test
+	public void testRomanNumeralsDeux(){
+		RomanNumeralsII romanNumerals = new RomanNumeralsII();
+		
+		String resultat = romanNumerals.convertNumber();
+		
+		assertEquals("2","II",resultat);
+	}
 }
