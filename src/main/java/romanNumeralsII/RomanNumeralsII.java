@@ -16,15 +16,21 @@ public class RomanNumeralsII {
 			resultat = quarante(number.substring(1,2), resultat);
 			resultat = deCinquanteAQuatreVingt(number.substring(1,2), resultat);
 			resultat = quatreVingtDix(number.substring(1,2), resultat);
+			resultat = centATroisCents(number, resultat, centaine);
 			
-			if (Integer.valueOf(number.substring(0,1)) >= 1 && Integer.valueOf(number.substring(0,1)) <= 3){
-				for ( int i = 1 ; i <= Integer.valueOf(number.substring(0,1)) ; i++){
-					centaine += "C";
-				}
-				resultat = centaine + resultat ; 
-			}
 		}
 		
+		return resultat;
+	}
+
+
+	private String centATroisCents(String number, String resultat, String centaine) {
+		if (Integer.valueOf(number.substring(0,1)) >= 1 && Integer.valueOf(number.substring(0,1)) <= 3){
+			for ( int i = 1 ; i <= Integer.valueOf(number.substring(0,1)) ; i++){
+				centaine += "C";
+			}
+			resultat = centaine + resultat ; 
+		}
 		return resultat;
 	}
 
