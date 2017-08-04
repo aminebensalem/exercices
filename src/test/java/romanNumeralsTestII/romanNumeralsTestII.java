@@ -12,7 +12,7 @@ public class romanNumeralsTestII {
 	public void testRomanNumerals(){
 		RomanNumeralsII romanNumerals = new RomanNumeralsII();
 		
-		String resultat = romanNumerals.convertNumber("I");
+		String resultat = romanNumerals.convertNumber("1");
 		
 		assertEquals("1" , "I" , resultat);
 	}
@@ -21,7 +21,7 @@ public class romanNumeralsTestII {
 	public void testRomanNumeralsDeux(){
 		RomanNumeralsII romanNumerals = new RomanNumeralsII();
 		
-		String resultat = romanNumerals.convertNumber("II");
+		String resultat = romanNumerals.convertNumber("2");
 		
 		assertEquals("2","II",resultat);
 	}
@@ -30,7 +30,7 @@ public class romanNumeralsTestII {
 	public void testRomanNumeralsTrois(){
 		RomanNumeralsII romanNumerals = new RomanNumeralsII();
 		
-		String resultat = romanNumerals.convertNumber("III");
+		String resultat = romanNumerals.convertNumber("3");
 		
 		assertEquals("3","III",resultat);
 	}
