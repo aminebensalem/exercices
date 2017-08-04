@@ -24,6 +24,7 @@ public class romanNumeralsTestII {
 		test("50","L");
 		test("81","LXXXI");
 		test("100","C");
+		test("101","CI");
 				
 	}
 }
