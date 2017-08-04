@@ -4,12 +4,19 @@ public class RomanNumeralsII {
 
 	public String convertNumber(String number) {
 		String resultat="";
-		resultat = chiffreEntreUnEtQuatre(number, resultat);
-		resultat = chiffreEntreCinqEtHuit(number, resultat);
-		resultat = chiffreNeuf(number, resultat);
-		if(number.equals("11")){
-			resultat = "XI";
+		if(number.length() == 1){
+			resultat = chiffreEntreUnEtQuatre(number, resultat);
+			resultat = chiffreEntreCinqEtHuit(number, resultat);
+			resultat = chiffreNeuf(number, resultat);
 		}
+		
+		if(number.length() == 2){
+			
+			resultat = "X" + chiffreEntreUnEtQuatre(number.substring(1, 2), resultat);
+			//resultat = "X" + chiffreEntreCinqEtHuit(number.substring(1, 2), resultat);
+			//resultat = "X" + chiffreNeuf(number.substring(1, 2), resultat);
+		}
+		
 		return resultat;
 	}
 
