@@ -19,7 +19,9 @@ public class RomanNumeralsII {
 			resultat = dixVingtEtTrentre(number, resultat, decimal);
 			resultat = quarante(number, resultat);
 			resultat = deCinquanteAQuatreVingt(number, resultat);
-			
+			if(Integer.valueOf(number.substring(0,1)) == 9){
+				resultat = "XC" + resultat;
+			}
 		}
 		return resultat;
 	}
