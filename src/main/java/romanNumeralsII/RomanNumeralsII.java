@@ -12,8 +12,13 @@ public class RomanNumeralsII {
 				resultat += "I";
 			}
 		}
-		if (number.equals("5")){
+		if (Integer.valueOf(number) >= 5 && Integer.valueOf(number) <=8){
 			resultat = "V";
+			if(Integer.valueOf(number) != 5){
+				for (int i = 6 ; i <= Integer.valueOf(number) ; i += 1){
+					resultat +="I";
+				}
+			}
 		}
 		
 		return resultat;
