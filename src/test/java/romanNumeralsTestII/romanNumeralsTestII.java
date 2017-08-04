@@ -43,4 +43,12 @@ public class romanNumeralsTestII {
 		
 		assertEquals("IV",resultat);
 	}
+	@Test
+	public void testRomanNumeralsCinq(){
+		RomanNumeralsII romanNumerals = new RomanNumeralsII();
+		
+		String resultat = romanNumerals.convertNumber("5");
+		
+		assertEquals("VI",resultat);
+	}
 }
