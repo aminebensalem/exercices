@@ -5,6 +5,7 @@ public class RomanNumeralsII {
 	public String convertNumber(String number) {
 		String resultat = "";
 		String decimal = "";
+		String centaine = "";
 		resultat = unites(number, resultat);
 		resultat = dizaines(number, resultat, decimal);
 		if (number.length() == 3){
@@ -16,8 +17,11 @@ public class RomanNumeralsII {
 			resultat = deCinquanteAQuatreVingt(number.substring(1,2), resultat);
 			resultat = quatreVingtDix(number.substring(1,2), resultat);
 			
-			if (Integer.valueOf(number.substring(0,1)) == 1){
-				resultat = "C" + resultat;
+			if (Integer.valueOf(number.substring(0,1)) >= 1 && Integer.valueOf(number.substring(0,1)) <= 3){
+				for ( int i = 1 ; i <= Integer.valueOf(number.substring(0,1)) ; i++){
+					centaine += "C";
+				}
+				resultat = centaine + resultat ; 
 			}
 		}
 		
