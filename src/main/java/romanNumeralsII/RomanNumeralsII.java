@@ -16,12 +16,18 @@ public class RomanNumeralsII {
 			resultat = chiffreEntreUnEtQuatre(number.substring(1, 2), resultat);
 			resultat = chiffreEntreCinqEtHuit(number.substring(1, 2), resultat);
 			resultat = chiffreNeuf(number.substring(1, 2), resultat);
-			if (Integer.valueOf(number.substring(0,1)) >= 1 && Integer.valueOf(number.substring(0,1)) <=3){
-				for (int i = 1 ; i <= Integer.valueOf(number.substring(0,1)) ; i+=1){
-					decimal += "X";
-				}
-				resultat = decimal + resultat;		
-			}			
+			resultat = dixVingtEtTrentre(number, resultat, decimal);			
+		}
+		return resultat;
+	}
+
+
+	private String dixVingtEtTrentre(String number, String resultat, String decimal) {
+		if (Integer.valueOf(number.substring(0,1)) >= 1 && Integer.valueOf(number.substring(0,1)) <=3){
+			for (int i = 1 ; i <= Integer.valueOf(number.substring(0,1)) ; i+=1){
+				decimal += "X";
+			}
+			resultat = decimal + resultat;		
 		}
 		return resultat;
 	}
