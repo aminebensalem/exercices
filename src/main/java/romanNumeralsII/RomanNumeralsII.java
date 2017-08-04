@@ -7,7 +7,19 @@ public class RomanNumeralsII {
 		String decimal = "";
 		resultat = unites(number, resultat);
 		resultat = dizaines(number, resultat, decimal);
-		
+		if (number.length() == 3){
+			resultat = chiffreEntreUnEtQuatre(number.substring(2, 3), resultat);
+			resultat = chiffreEntreCinqEtHuit(number.substring(2, 3), resultat);
+			resultat = chiffreNeuf(number.substring(2, 3), resultat);
+			resultat = dixVingtEtTrentre(number.substring(1,2), resultat, decimal);
+			resultat = quarante(number.substring(1,2), resultat);
+			resultat = deCinquanteAQuatreVingt(number.substring(1,2), resultat);
+			resultat = quatreVingtDix(number.substring(1,2), resultat);
+			
+			if (Integer.valueOf(number.substring(0,1)) == 1){
+				resultat = "C" + resultat;
+			}
+		}
 		
 		return resultat;
 	}
