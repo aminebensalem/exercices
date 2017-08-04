@@ -15,7 +15,11 @@ public class RomanNumeralsII {
 			resultat = chiffreEntreUnEtQuatre(number.substring(1, 2), resultat);
 			resultat = chiffreEntreCinqEtHuit(number.substring(1, 2), resultat);
 			resultat = chiffreNeuf(number.substring(1, 2), resultat);
-			resultat = "X" + resultat;
+			if((number.substring(0,1)+"0").equals("10")){
+				resultat = "X" + resultat;
+			}
+			else resultat = "XX" + resultat;
+			
 		}
 		
 		return resultat;
