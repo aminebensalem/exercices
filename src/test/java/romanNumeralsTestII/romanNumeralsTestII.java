@@ -49,6 +49,6 @@ public class romanNumeralsTestII {
 		
 		String resultat = romanNumerals.convertNumber("5");
 		
-		assertEquals("VI",resultat);
+		assertEquals("V",resultat);
 	}
 }
