@@ -4,6 +4,13 @@ public class RomanNumeralsII {
 
 	public String convertNumber(String number) {
 		String resultat="";
+		resultat = chiffreEntreUnEtQuatre(number, resultat);
+		resultat = chiffreEntreCinqEtHuit(number, resultat);		
+		return resultat;
+	}
+
+	
+	private String chiffreEntreUnEtQuatre(String number, String resultat) {
 		if(number.equals("4")){
 			resultat ="IV";
 		}
@@ -12,6 +19,10 @@ public class RomanNumeralsII {
 				resultat += "I";
 			}
 		}
+		return resultat;
+	}
+
+	private String chiffreEntreCinqEtHuit(String number, String resultat) {
 		if (Integer.valueOf(number) >= 5 && Integer.valueOf(number) <=8){
 			resultat = "V";
 			if(Integer.valueOf(number) != 5){
@@ -20,7 +31,6 @@ public class RomanNumeralsII {
 				}
 			}
 		}
-		
 		return resultat;
 	}	
 }

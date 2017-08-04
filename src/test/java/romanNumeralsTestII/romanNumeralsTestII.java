@@ -7,57 +7,18 @@ import org.junit.Test;
 import romanNumeralsII.RomanNumeralsII;
 
 public class romanNumeralsTestII {
+	private void test(String entree , String sortie) {
+		RomanNumeralsII romanNumerals = new RomanNumeralsII();
 	
+		String resultat = romanNumerals.convertNumber(entree);
+		
+		assertEquals(sortie , resultat);
+	}
 	@Test
 	public void testRomanNumerals(){
-		RomanNumeralsII romanNumerals = new RomanNumeralsII();
-		
-		String resultat = romanNumerals.convertNumber("1");
-		
-		assertEquals("I" , resultat);
-	}
-	
-	@Test
-	public void testRomanNumeralsDeux(){
-		RomanNumeralsII romanNumerals = new RomanNumeralsII();
-		
-		String resultat = romanNumerals.convertNumber("2");
-		
-		assertEquals("II",resultat);
-	}
-	
-	@Test
-	public void testRomanNumeralsTrois(){
-		RomanNumeralsII romanNumerals = new RomanNumeralsII();
-		
-		String resultat = romanNumerals.convertNumber("3");
-		
-		assertEquals("III",resultat);
-	}
-	
-	@Test
-	public void testRomanNumeralsQuatre(){
-		RomanNumeralsII romanNumerals = new RomanNumeralsII();
-		
-		String resultat = romanNumerals.convertNumber("4");
-		
-		assertEquals("IV",resultat);
-	}
-	@Test
-	public void testRomanNumeralsCinq(){
-		RomanNumeralsII romanNumerals = new RomanNumeralsII();
-		
-		String resultat = romanNumerals.convertNumber("5");
-		
-		assertEquals("V",resultat);
-	}
-	
-	@Test
-	public void testRomanNumeralsHuit(){
-		RomanNumeralsII romanNumerals = new RomanNumeralsII();
-		
-		String resultat = romanNumerals.convertNumber("8");
-		
-		assertEquals("VIII",resultat);
+		test("1","I");
+		test("2","II");
+		test("5","V");
+		test("8","VIII");
 	}
 }
