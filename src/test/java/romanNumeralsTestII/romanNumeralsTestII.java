@@ -23,5 +23,6 @@ public class romanNumeralsTestII {
 		test("9","IX");
 		test("11","XI");
 		test("12","XII");
+		test("19","XIX");
 	}
 }
