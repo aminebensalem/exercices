@@ -17,9 +17,15 @@ public class RomanNumeralsII {
 			resultat = chiffreEntreCinqEtHuit(number.substring(1, 2), resultat);
 			resultat = chiffreNeuf(number.substring(1, 2), resultat);
 			resultat = dixVingtEtTrentre(number, resultat, decimal);
-			if(Integer.valueOf(number.substring(0,1)) == 4){
-				resultat = "XL" + resultat;
-			}
+			resultat = quarante(number, resultat);
+		}
+		return resultat;
+	}
+
+
+	private String quarante(String number, String resultat) {
+		if(Integer.valueOf(number.substring(0,1)) == 4){
+			resultat = "XL" + resultat;
 		}
 		return resultat;
 	}
