@@ -5,7 +5,10 @@ public class RomanNumeralsII {
 	public String convertNumber(String number) {
 		String resultat="";
 		resultat = chiffreEntreUnEtQuatre(number, resultat);
-		resultat = chiffreEntreCinqEtHuit(number, resultat);		
+		resultat = chiffreEntreCinqEtHuit(number, resultat);
+		if(number.equals("9")){
+			resultat = "IX";
+		}
 		return resultat;
 	}
 
