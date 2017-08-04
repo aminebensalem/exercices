@@ -14,7 +14,7 @@ public class romanNumeralsTestII {
 		
 		String resultat = romanNumerals.convertNumber("1");
 		
-		assertEquals("1" , "I" , resultat);
+		assertEquals("I" , resultat);
 	}
 	
 	@Test
@@ -23,7 +23,7 @@ public class romanNumeralsTestII {
 		
 		String resultat = romanNumerals.convertNumber("2");
 		
-		assertEquals("2","II",resultat);
+		assertEquals("II",resultat);
 	}
 	
 	@Test
@@ -32,6 +32,15 @@ public class romanNumeralsTestII {
 		
 		String resultat = romanNumerals.convertNumber("3");
 		
-		assertEquals("3","III",resultat);
+		assertEquals("III",resultat);
+	}
+	
+	@Test
+	public void testRomanNumeralsQuatre(){
+		RomanNumeralsII romanNumerals = new RomanNumeralsII();
+		
+		String resultat = romanNumerals.convertNumber("4");
+		
+		assertEquals("IV",resultat);
 	}
 }
