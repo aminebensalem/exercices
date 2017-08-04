@@ -25,4 +25,13 @@ public class romanNumeralsTestII {
 		
 		assertEquals("2","II",resultat);
 	}
+	
+	@Test
+	public void testRomanNumeralsTrois(){
+		RomanNumeralsII romanNumerals = new RomanNumeralsII();
+		
+		String resultat = romanNumerals.convertNumber("III");
+		
+		assertEquals("3","III",resultat);
+	}
 }
