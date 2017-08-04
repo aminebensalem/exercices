@@ -31,6 +31,7 @@ public class romanNumeralsTestII {
 		test("40", "XL");
 		test("44","XLIV");
 		test("50","L");
+		test("81","LXXXI");
 		
 	}
 }
