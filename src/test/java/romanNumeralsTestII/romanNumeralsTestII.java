@@ -51,4 +51,13 @@ public class romanNumeralsTestII {
 		
 		assertEquals("V",resultat);
 	}
+	
+	@Test
+	public void testRomanNumeralsHuit(){
+		RomanNumeralsII romanNumerals = new RomanNumeralsII();
+		
+		String resultat = romanNumerals.convertNumber("8");
+		
+		assertEquals("VIII",resultat);
+	}
 }
