@@ -5,12 +5,15 @@ public class RomanNumeralsII {
 	public String convertNumber(String number) {
 		String resultat = "";
 		String decimal = "";
-		if(number.length() == 1){
-			resultat = chiffreEntreUnEtQuatre(number, resultat);
-			resultat = chiffreEntreCinqEtHuit(number, resultat);
-			resultat = chiffreNeuf(number, resultat);
-		}
+		resultat = unites(number, resultat);
+		resultat = dizaines(number, resultat, decimal);
 		
+		
+		return resultat;
+	}
+
+
+	private String dizaines(String number, String resultat, String decimal) {
 		if(number.length() == 2){
 			
 			resultat = chiffreEntreUnEtQuatre(number.substring(1, 2), resultat);
@@ -19,9 +22,25 @@ public class RomanNumeralsII {
 			resultat = dixVingtEtTrentre(number, resultat, decimal);
 			resultat = quarante(number, resultat);
 			resultat = deCinquanteAQuatreVingt(number, resultat);
-			if(Integer.valueOf(number.substring(0,1)) == 9){
-				resultat = "XC" + resultat;
-			}
+			resultat = quatreVingtDix(number, resultat);
+		}
+		return resultat;
+	}
+
+
+	private String unites(String number, String resultat) {
+		if(number.length() == 1){
+			resultat = chiffreEntreUnEtQuatre(number, resultat);
+			resultat = chiffreEntreCinqEtHuit(number, resultat);
+			resultat = chiffreNeuf(number, resultat);
+		}
+		return resultat;
+	}
+
+
+	private String quatreVingtDix(String number, String resultat) {
+		if(Integer.valueOf(number.substring(0,1)) == 9){
+			resultat = "XC" + resultat;
 		}
 		return resultat;
 	}
