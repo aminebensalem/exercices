@@ -6,6 +6,12 @@ public class RomanNumeralsII {
 		String resultat="";
 		resultat = chiffreEntreUnEtQuatre(number, resultat);
 		resultat = chiffreEntreCinqEtHuit(number, resultat);
+		resultat = chiffreNeuf(number, resultat);
+		return resultat;
+	}
+
+
+	private String chiffreNeuf(String number, String resultat) {
 		if(number.equals("9")){
 			resultat = "IX";
 		}
