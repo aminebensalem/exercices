@@ -12,9 +12,10 @@ public class RomanNumeralsII {
 		
 		if(number.length() == 2){
 			
-			resultat = "X" + chiffreEntreUnEtQuatre(number.substring(1, 2), resultat);
-			//resultat = "X" + chiffreEntreCinqEtHuit(number.substring(1, 2), resultat);
-			//resultat = "X" + chiffreNeuf(number.substring(1, 2), resultat);
+			resultat = chiffreEntreUnEtQuatre(number.substring(1, 2), resultat);
+			resultat = chiffreEntreCinqEtHuit(number.substring(1, 2), resultat);
+			resultat = chiffreNeuf(number.substring(1, 2), resultat);
+			resultat = "X" + resultat;
 		}
 		
 		return resultat;
@@ -23,7 +24,7 @@ public class RomanNumeralsII {
 
 	private String chiffreNeuf(String number, String resultat) {
 		if(number.equals("9")){
-			resultat = "IX";
+			resultat += "IX";
 		}
 		return resultat;
 	}
