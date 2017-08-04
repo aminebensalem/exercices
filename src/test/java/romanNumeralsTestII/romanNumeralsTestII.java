@@ -20,5 +20,6 @@ public class romanNumeralsTestII {
 		test("2","II");
 		test("5","V");
 		test("8","VIII");
+		test("9","IX");
 	}
 }
