@@ -30,7 +30,7 @@ public class romanNumeralsTestII {
 		test("30", "XXX");
 		test("40", "XL");
 		test("44","XLIV");
-	
+		test("50","L");
 		
 	}
 }
