@@ -16,24 +16,14 @@ public class romanNumeralsTestII {
 	}
 	@Test
 	public void testRomanNumerals(){
-		test("1","I");
-		test("2","II");
+	
 		test("5","V");
 		test("8","VIII");
 		test("9","IX");
-		test("11","XI");
-		test("12","XII");
-		test("19","XIX");
-		test("10","X");
-		test("20","XX");
-		test("22","XXII");
-		test("30", "XXX");
-		test("40", "XL");
 		test("44","XLIV");
 		test("50","L");
 		test("81","LXXXI");
-		test("90","XC");
-		test("95","XCV");
-		
+		test("100","C");
+				
 	}
 }
