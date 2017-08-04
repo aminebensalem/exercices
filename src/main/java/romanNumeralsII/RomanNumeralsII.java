@@ -16,7 +16,10 @@ public class RomanNumeralsII {
 			resultat = chiffreEntreUnEtQuatre(number.substring(1, 2), resultat);
 			resultat = chiffreEntreCinqEtHuit(number.substring(1, 2), resultat);
 			resultat = chiffreNeuf(number.substring(1, 2), resultat);
-			resultat = dixVingtEtTrentre(number, resultat, decimal);			
+			resultat = dixVingtEtTrentre(number, resultat, decimal);
+			if(Integer.valueOf(number.substring(0,1)) == 4){
+				resultat = "XL" + resultat;
+			}
 		}
 		return resultat;
 	}
