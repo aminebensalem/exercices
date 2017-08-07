@@ -14,10 +14,14 @@ public class romanNumeralsTestII {
 		
 		assertEquals(sortie , resultat);
 	}
+	
+	@Test
+	public void jePeuxConvertir5(){
+		test("5","V");
+	}
 	@Test
 	public void testRomanNumerals(){
 	
-		test("5","V");
 		test("8","VIII");
 		test("9","IX");
 		test("44","XLIV");
@@ -25,6 +29,8 @@ public class romanNumeralsTestII {
 		test("81","LXXXI");
 		test("100","C");
 		test("101","CI");
-		test("200","CC");		
+		test("200","CC");
+		test("299","CCXCIX");
+		test("1500","MD");
 	}
 }

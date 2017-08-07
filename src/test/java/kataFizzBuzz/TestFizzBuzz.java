@@ -35,7 +35,7 @@ public class TestFizzBuzz {
 
 	@Test
 	public void testDuNombreQuinze(){
-		FizzBuzz fizzBuzz =new FizzBuzz();
+		FizzBuzz fizzBuzz = new FizzBuzz();
 		
 		String resultat = fizzBuzz.verifierLeNombre(15);
 		
